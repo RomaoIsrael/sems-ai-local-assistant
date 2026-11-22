@@ -1,4 +1,4 @@
-# SEMS AI — Local Assistant (Python 3.11 / 3.12)
+# SEMS AI — Local Assistant (Python 3.11 – 3.13)
 customtkinter>=5.2,<7
 python-docx>=1.2.0
 openpyxl>=3.1.2

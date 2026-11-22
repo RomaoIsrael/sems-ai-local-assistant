@@ -6,14 +6,8 @@
 $ErrorActionPreference = "Stop"
 Set-Location (Join-Path $PSScriptRoot "..")
 
-function Find-Python {
-    foreach ($v in @("3.12", "3.11")) {
-        try { $p = & py -$v -c "import sys; print(sys.executable)" 2>$null; if ($LASTEXITCODE -eq 0) { return $p } } catch {}
-    }
-    throw "No se encontró Python 3.11 o 3.12. Instálelo desde python.org (marcar 'tcl/tk and IDLE')."
-}
-
-$py = Find-Python
+. (Join-Path $PSScriptRoot "find_python.ps1")
+$py = Find-SemsPython
 Write-Host "Python: $py"
 & $py -c "import tkinter" ; if ($LASTEXITCODE -ne 0) { throw "Tkinter no está disponible en esta instalación de Python." }
 if (-not (Test-Path ".venv")) { & $py -m venv .venv }

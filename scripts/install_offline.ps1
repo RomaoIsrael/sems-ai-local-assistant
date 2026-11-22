@@ -5,9 +5,8 @@
 $ErrorActionPreference = "Stop"
 Set-Location (Join-Path $PSScriptRoot "..")
 if (-not (Test-Path "offline_packages")) { throw "No existe la carpeta offline_packages." }
-$py = $null
-foreach ($v in @("3.12", "3.11")) { try { $p = & py -$v -c "import sys; print(sys.executable)" 2>$null; if ($LASTEXITCODE -eq 0) { $py = $p; break } } catch {} }
-if (-not $py) { throw "Instale Python 3.11 o 3.12 desde el instalador copiado." }
+. (Join-Path $PSScriptRoot "find_python.ps1")
+$py = Find-SemsPython
 if (-not (Test-Path ".venv")) { & $py -m venv .venv }
 & .\.venv\Scripts\python.exe -m pip install --no-index --find-links offline_packages --upgrade pip
 & .\.venv\Scripts\python.exe -m pip install --no-index --find-links offline_packages -r requirements.txt
