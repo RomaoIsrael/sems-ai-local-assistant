@@ -31,7 +31,7 @@ class Settings:
     llm_enabled: bool = True
     ollama_url: str = "http://127.0.0.1:11434"
     llm_model: str = "qwen2.5:7b-instruct"
-    embedding_model: str = "nomic-embed-text"
+    embedding_model: str = "bge-m3"
     semantic_search_enabled: bool = False
     llm_timeout_s: int = 300
     llm_temperature: float = 0.1

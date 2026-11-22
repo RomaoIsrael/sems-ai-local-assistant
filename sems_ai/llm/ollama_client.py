@@ -28,7 +28,7 @@ class LLMStatus:
 
 class OllamaClient:
     def __init__(self, base_url: str = "http://127.0.0.1:11434", model: str = "qwen2.5:7b-instruct",
-                 embedding_model: str = "nomic-embed-text", timeout: int = 300, temperature: float = 0.1):
+                 embedding_model: str = "bge-m3", timeout: int = 300, temperature: float = 0.1):
         if not is_local_url(base_url):
             raise ValueError("Por seguridad, SEMS AI solo admite un servidor Ollama local (127.0.0.1/localhost).")
         self.base_url = base_url.rstrip("/")

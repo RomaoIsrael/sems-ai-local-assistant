@@ -1,0 +1,14 @@
+[
+  {
+    "id": "EJEMPLO-1",
+    "question": "REEMPLAZAR por una pregunta real sobre un documento del repositorio",
+    "expected_doc_codes": ["CODIGO-DEL-DOCUMENTO-QUE-DEBE-RECUPERARSE"],
+    "expected_terms": ["término que debe aparecer en el fragmento"],
+    "expected_numerals": ["numeral real del documento"]
+  },
+  {
+    "id": "EJEMPLO-2",
+    "question": "REEMPLAZAR por una pregunta cuya respuesta NO esté en el repositorio",
+    "expect_no_evidence": true
+  }
+]
