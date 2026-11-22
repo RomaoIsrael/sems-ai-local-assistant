@@ -1,4 +1,4 @@
-<#
+﻿<#
   Prepara un paquete de instalación OFFLINE (ejecutar en un equipo CON internet).
   Descarga las ruedas (wheels) de Windows x64 para Python 3.11 y 3.12 en .\offline_packages
 #>

@@ -1,4 +1,4 @@
-<#
+﻿<#
   Instalación OFFLINE de SEMS AI (sin internet), usando paquetes previamente descargados
   con scripts\download_offline_packages.ps1
 #>

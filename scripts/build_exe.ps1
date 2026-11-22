@@ -1,4 +1,4 @@
-<#
+﻿<#
   Genera el ejecutable de Windows con PyInstaller (carpeta dist\SEMS_AI\SEMS_AI.exe).
   El motor Ollama y los modelos se distribuyen por separado.
 #>

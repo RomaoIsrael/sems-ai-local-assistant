@@ -1,4 +1,4 @@
-<#
+﻿<#
   Instalación ONLINE de SEMS AI en Windows (requiere internet solo durante la instalación).
   Uso (PowerShell, en la carpeta del proyecto):
       powershell -ExecutionPolicy Bypass -File scripts\install_windows.ps1
